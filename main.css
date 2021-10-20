@@ -1,0 +1,261 @@
+/* General Styling */
+@font-face {
+  font-family: 'Open Sans';
+  src: url('./fonts/OpenSans-Regular.ttf')  format('truetype');
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  src: url('./fonts/Quicksand-VariableFont:wght.ttf')  format('truetype');
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font: normal 16px sans-serif;
+    color: #555;
+}
+
+nav {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    opacity: 0.75;
+    /* LATER */
+    color: #fff;
+}
+
+a:hover {
+    opacity: 1;
+}
+
+/* Header Style */
+
+header {
+    width: 100%;
+    display: flex; 
+    justify-content: space-between;
+    padding: 35px 100px 0;
+    align-items: center;
+    opacity: 0;
+    animation: 1s fadeIn 0.5s forwards;
+    /* LATER */
+    position: absolute;
+    color: #fff;
+    z-index: 1;
+}
+
+@keyframes fadeIn {
+    to{
+        opacity: 1;
+    }
+}
+
+header h2 {
+    font-family: "Quicksand", sans-serif;
+}
+
+
+header nav {
+    display: flex;
+}
+
+header nav li {
+    margin:  0 15px;
+}
+
+/* Hero Section Style */
+
+a.btn {
+    font-weight: bold;
+    text-transform: uppercase;
+    opacity: 1;
+    border-radius: 4px;
+    text-align: center;
+    background-color: #3f51b5;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 80px;
+}
+
+.hero {
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    min-height: 100vh;
+    /* NOW */
+    color: #fff;
+}
+
+.hero .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    z-index: -1;
+    background-color: darksalmon;
+}
+
+.hero h1 {
+    font: bold 90px "Just Another Hand", sans-serif;
+    margin-bottom: 15px;
+}
+
+.hero h3 {
+    font: bold 28px "Open Sans", sans-serif;
+    margin-bottom: 40px;
+}
+
+.hero a.btn {
+    padding: 20px 46px;
+}
+
+.hero-content-area {
+    opacity: 0;
+    margin-top: 100px;
+    animation: 0.7s slideFade 0.7s forwards;
+}
+
+@keyframes slideFade {
+    to {
+        opacity: 1;
+        margin-top: -40px;
+    }
+}
+
+/* Image Gallary */
+
+ul {
+    list-style: none;
+}
+
+.grid {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+hr {
+    width: 250px;
+    height: 3px;
+    background-color: darksalmon;
+    border: 0;
+    margin-bottom: 50px;
+}
+
+section h3.title {
+    text-transform: capitalize;
+    font: bold 32px "Open Sans", sans-serif;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+section p {
+    padding: 0 20px;
+    text-align: center;
+    margin-bottom: 30px;
+    line-height: 2;
+    max-width: 775px;
+}
+
+.destinations .grid li {
+    padding: 20px;
+    height: 350px;
+    background-size: cover;
+    background-position: center;
+    background-clip: content-box;
+}
+
+.destinations .grid .small {
+    flex-basis: 30%;
+}
+
+.destinations .grid .large {
+    flex-basis: 70%;
+}
+
+/* Packages */
+
+ section:not(.hero):nth-child(even) {
+     background-color: #f5f5f5;
+ }
+
+ .packages .grid li {
+    padding: 50px;
+    flex-basis: 50%;
+    text-align: center;
+ }
+
+ .packages .grid i {
+    color: rgb(255, 178, 152); 
+ }
+
+ .packages .grid  li h4 {
+    font-size: 30px;
+    margin: 25px 0; 
+ }
+
+/* Testimonials */
+.testimonials .quote {
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 1.5;
+    margin: 40px 0 25px;
+}
+
+/* Contact */
+.contact form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+}
+
+.contact form .btn {
+    padding: 17px 44px;
+}
+
+.contact form input {
+    padding: 15px;
+    margin-right: 30px;
+    font-size: 18px;
+    color: #555;
+    flex-grow: 1;
+}
+
+/* Footer */
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #ca8d29;
+    color: #ffffff;
+    padding: 20px 0;
+}
+
+footer ul {
+    display: flex;
+}
+
+footer ul li {
+    margin-left: 16px;
+}
+
+footer p {
+    text-transform: uppercase;
+    font-size: 14px;
+    opacity: 0.6;
+}
